@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TE AMO NINA</title>
+
+    <style>
+        body {
+            background-color: red;
+        }
+
+        .PAINEL {
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #SIM {
+            height: 40px;
+            width: 60px;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            background-color: green;
+        }
+
+        #NAO {
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            background-color: blue;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="PAINEL">
+    <h1>TE AMO NINA</h1>
+
+    <img src="https://i.pinimg.com/736x/0a/50/5e/0a505e6345ed1d8128a93142ce01ae0e.jpg" width="200">
+
+    <h2>ACEITA CASAR CMG?</h2>
+
+    <a href="https://www.youtube.com/watch?v=-QL1vQUNgI8&list=RD-QL1vQUNgI8&start_radio=1">
+        <button id="SIM">SIM</button>
+    </a>
+
+    <button onmouseover="FUJA()" id="NAO">Não!</button>
+</div>
+
+<script>
+    function FUJA() {
+        var botaoNao = document.getElementById("NAO");
+
+        var larguraJanela = window.innerWidth;
+        var alturaJanela = window.innerHeight;
+
+        var maxX = larguraJanela - botaoNao.offsetWidth;
+        var maxY = alturaJanela - botaoNao.offsetHeight;
+
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+    }
+</script>
+
+</body>
+</html>
